@@ -1,0 +1,125 @@
+{
+  "title": "HeatKit – Energy Weapon Against Expensive Heating!",
+  "description": "Sale of pellet burner in disassembled form. Save up to 50%!",
+  "header": {
+    "title": "HeatKit",
+    "subtitle": "Energy weapon against expensive heating!"
+  },
+  "hero": {
+    "title": "Save up to 50% on the pellet burner",
+    "subtitle": "Buy the parts in disassembled form and assemble it yourself!",
+    "cta": "Order Now"
+  },
+  "advantages": {
+    "title": "Main product advantages",
+    "items": [
+      {
+        "title": "Low price",
+        "description": "We offer parts without manufacturer markups, allowing you to save up to 50%."
+      },
+      {
+        "title": "Easy assembly",
+        "description": "The kit is designed for easy and quick assembly."
+      },
+      {
+        "title": "High-quality materials",
+        "description": "We use only high-quality materials to produce the parts."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Customer reviews",
+    "items": [
+      {
+        "text": "Very satisfied with the purchase! Assembled the burner in 2 hours, everything works perfectly.",
+        "author": "Ivan, Kyiv"
+      },
+      {
+        "text": "Significant savings, and the quality is top-notch. Highly recommended!",
+        "author": "Olena, Lviv"
+      }
+    ]
+  },
+  "aboutProduct": {
+    "title": "About the product",
+    "burnerDetails": {
+      "title": "Detailed description of the pellet burner",
+      "description": "Our pellet burner is a modern solution for efficient and economical heating. It consists of high-quality parts that are easy to assemble yourself."
+    },
+    "workingPrinciple": {
+      "title": "How it works",
+      "description": "The burner operates on pellets that are loaded into a special hopper. They are automatically fed into the combustion chamber, where heat is generated."
+    }
+  },
+  "howItWorks": {
+    "title": "How it works?",
+    "stepByStep": {
+      "title": "Step-by-step assembly guide",
+      "description": "We provide a detailed assembly guide to help you easily complete the task."
+    },
+    "videoInstructions": {
+      "title": "Video instructions",
+      "description": "Watch our video instructions on YouTube to assemble the burner even faster."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How long does the assembly take?",
+        "answer": "On average, assembly takes 2-3 hours."
+      },
+      {
+        "question": "Do I need special tools?",
+        "answer": "No, everything needed is included in the kit."
+      }
+    ]
+  },
+  "benefitsAndSavings": {
+    "title": "Benefits and savings",
+    "items": [
+      {
+        "title": "Comparison with other heating systems",
+        "description": "Our burner saves up to 50% compared to traditional heating systems."
+      },
+      {
+        "title": "Pellet heating cost calculation",
+        "description": "Use our calculator to find out how much you can save."
+      }
+    ]
+  },
+  "deliveryAndPayment": {
+    "title": "Delivery and payment",
+    "items": [
+      {
+        "title": "Delivery conditions",
+        "description": "Delivery across Ukraine and Europe."
+      },
+      {
+        "title": "Payment options",
+        "description": "Payment by card, PayPal, or cash on delivery."
+      },
+      {
+        "title": "Warranty",
+        "description": "2-year warranty on all components."
+      }
+    ]
+  },
+  "contactAndSupport": {
+    "title": "Contact and support",
+    "sendBtn": "Send",
+    "socials": {
+      "title": "Telegram/Viber chat",
+      "description": "Message us on Telegram or Viber for quick consultation."
+    },
+    "contactForm": {
+      "title": "Contact Form",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    }
+  },
+  "footer": {
+    "text": "© 2023 HeatKit. All rights reserved."
+  }
+}

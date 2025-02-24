@@ -1,0 +1,125 @@
+{
+  "title": "HeatKit – Broń energetyczna przeciwko drogim systemom grzewczym!",
+  "description": "Sprzedaż pieca na pelety w rozłożonej formie. Oszczędzaj do 50%!",
+  "header": {
+    "title": "HeatKit",
+    "subtitle": "Broń energetyczna przeciwko drogim systemom grzewczym!"
+  },
+  "hero": {
+    "title": "Oszczędzaj do 50% na piecu na pelety",
+    "subtitle": "Kup części w rozłożonej formie i złóż je samodzielnie!",
+    "cta": "Zamów teraz"
+  },
+  "advantages": {
+    "title": "Główne zalety produktu",
+    "items": [
+      {
+        "title": "Niska cena",
+        "description": "Oferujemy części bez narzutów producentów, co pozwala zaoszczędzić do 50%."
+      },
+      {
+        "title": "Łatwy montaż",
+        "description": "Zestaw jest zaprojektowany do łatwego i szybkiego montażu."
+      },
+      {
+        "title": "Wysokiej jakości materiały",
+        "description": "Używamy tylko wysokiej jakości materiałów do produkcji części."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Opinie klientów",
+    "items": [
+      {
+        "text": "Bardzo zadowolony z zakupu! Złożyłem piec w 2 godziny, wszystko działa idealnie.",
+        "author": "Ivan, Kijów"
+      },
+      {
+        "text": "Znacząca oszczędność, a jakość na najwyższym poziomie. Gorąco polecam!",
+        "author": "Olena, Lwów"
+      }
+    ]
+  },
+  "aboutProduct": {
+    "title": "O produkcie",
+    "burnerDetails": {
+      "title": "Szczegółowy opis pieca na pelety",
+      "description": "Nasz piec na pelety to nowoczesne rozwiązanie do efektywnego i ekonomicznego ogrzewania. Składa się z wysokiej jakości części, które łatwo złożyć samodzielnie."
+    },
+    "workingPrinciple": {
+      "title": "Jak to działa",
+      "description": "Piec działa na peletach, które ładowane są do specjalnego zasobnika. Automatycznie są podawane do komory spalania, gdzie generowane jest ciepło."
+    }
+  },
+  "howItWorks": {
+    "title": "Jak to działa?",
+    "stepByStep": {
+      "title": "Instrukcja montażu krok po kroku",
+      "description": "Udostępniamy szczegółową instrukcję montażu, która pomoże Ci łatwo wykonać zadanie."
+    },
+    "videoInstructions": {
+      "title": "Instrukcje wideo",
+      "description": "Zobacz nasze instrukcje wideo na YouTube, aby szybciej złożyć piec."
+    }
+  },
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "items": [
+      {
+        "question": "Jak długo trwa montaż?",
+        "answer": "Średnio montaż zajmuje 2-3 godziny."
+      },
+      {
+        "question": "Czy potrzebne są specjalne narzędzia?",
+        "answer": "Nie, wszystko, co potrzebne, jest w zestawie."
+      }
+    ]
+  },
+  "benefitsAndSavings": {
+    "title": "Korzyści i oszczędności",
+    "items": [
+      {
+        "title": "Porównanie z innymi systemami grzewczymi",
+        "description": "Nasz piec oszczędza do 50% w porównaniu do tradycyjnych systemów grzewczych."
+      },
+      {
+        "title": "Obliczanie kosztów ogrzewania peletem",
+        "description": "Skorzystaj z naszego kalkulatora, aby dowiedzieć się, ile możesz zaoszczędzić."
+      }
+    ]
+  },
+  "deliveryAndPayment": {
+    "title": "Dostawa i płatności",
+    "items": [
+      {
+        "title": "Warunki dostawy",
+        "description": "Dostawa na terenie całej Polski oraz Europy."
+      },
+      {
+        "title": "Opcje płatności",
+        "description": "Płatność kartą, PayPal lub za pobraniem."
+      },
+      {
+        "title": "Gwarancja",
+        "description": "2-letnia gwarancja na wszystkie komponenty."
+      }
+    ]
+  },
+  "contactAndSupport": {
+    "title": "Kontakt i wsparcie",
+    "sendBtn": "Wysłać",
+    "socials": {
+      "title": "Czat Telegram/Viber",
+      "description": "Napisz do nas na Telegramie lub Viberze, aby uzyskać szybką konsultację."
+    },
+    "contactForm": {
+      "title": "Informacja zwrotna",
+      "name": "Imię",
+      "email": "Email",
+      "message": "Powiadomienie"
+    }
+  },
+  "footer": {
+    "text": "© 2023 HeatKit. Wszelkie prawa zastrzeżone."
+  }
+}

@@ -1,100 +1,391 @@
+"use client";
+
+import { useRef } from "react";
+
+import Head from "next/head";
 import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
+import ukTranslations from "../../public/locales/uk.json";
+import enTranslations from "../../public/locales/en.json";
+import plTranslations from "../../public/locales/pl.json";
+import BurnerModal from "@/components/3DModels/BurnerModal/BurnerModal";
+
+const translations = {
+  uk: ukTranslations,
+  en: enTranslations,
+  pl: plTranslations,
+};
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const contactSectionRef = useRef<HTMLDivElement>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+  const scrollToContact = () => {
+    contactSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const locale = searchParams.get("lang") as "en" | "pl" | "uk";
+  const t = translations[locale] || translations.uk;
+
+  const changeLanguage = (lang: string) => {
+    const newUrl = `?lang=${lang}`;
+    router.push(newUrl, { scroll: false });
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Head>
+        <title>{t.title}</title>
+
+        <meta name="description" content={t.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      {/* Header */}
+      <header className="bg-[#FFD700] text-black py-4 shadow-lg">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <h1 className="text-3xl font-bold">{t.header.title}</h1>
+          <div className="flex gap-8">
+            {["en", "uk", "pl"].map((lang) => (
+              <p
+                key={lang}
+                className={`text-lg cursor-pointer ${
+                  locale === lang ? "underline font-bold" : ""
+                }`}
+                onClick={() => changeLanguage(lang)}
+              >
+                {lang.toUpperCase()}
+              </p>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-[#FFD700] text-black py-20 relative">
+        {/* Контент секції */}
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-4">{t.hero.title}</h2>
+          <p className="text-xl mb-8">{t.hero.subtitle}</p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={scrollToContact}
+            className="bg-black cursor-pointer text-[#FFD700] px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition duration-300"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            {t.hero.cta}
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Фонове зображення з opacity */}
+        <div className="absolute inset-0 overflow-hidden">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/images/pellet-burner-1.jpg"
+            alt="Пелетний пальник"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-25"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* Основні переваги продукту */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.advantages.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {t.advantages.items.map(
+              (item: { title: string; description: string }, idx: number) => (
+                <div
+                  key={`adv-item-${idx}`}
+                  className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
+                >
+                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-gray-700">{item.description}</p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Відгуки покупців */}
+      <section className="bg-gray-100 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.reviews.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {t.reviews.items.map(
+              (item: { text: string; author: string }, idx: number) => (
+                <div
+                  key={`review-item-${idx}`}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <p className="text-gray-700">{item.text}</p>
+                  <p className="text-gray-900 font-bold mt-4">
+                    – {item.author}
+                  </p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Про продукт */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.aboutProduct.title}
+          </h2>
+
+          <BurnerModal />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-20">
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                {t.aboutProduct.burnerDetails.title}
+              </h3>
+              <p className="text-gray-700">
+                {t.aboutProduct.burnerDetails.description}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                {t.aboutProduct.workingPrinciple.title}
+              </h3>
+              <p className="text-gray-700">
+                {t.aboutProduct.workingPrinciple.description}
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative h-64">
+              <Image
+                src="/images/pellet-burner-1.jpg"
+                alt="pellet-burner#1"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-64">
+              <Image
+                src="/images/pellet-burner-2.jpg"
+                alt="pellet-burner#2"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="relative h-64">
+              <Image
+                src="/images/pellet-burner-3.jpg"
+                alt="pellet-burner#3"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Як це працює? */}
+      <section className="bg-gray-100 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.howItWorks.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                {t.howItWorks.stepByStep.title}
+              </h3>
+              <p className="text-gray-700">
+                {t.howItWorks.stepByStep.description}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                {t.howItWorks.videoInstructions.title}
+              </h3>
+              <p className="text-gray-700">
+                {t.howItWorks.videoInstructions.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Часті запитання та відповіді */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.faq.title}
+          </h2>
+          <div className="space-y-4">
+            {t.faq.items.map(
+              (
+                item: {
+                  question: string;
+                  answer: string;
+                },
+                idx: number
+              ) => (
+                <div
+                  key={`faq-item-${idx}`}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <h3 className="text-xl font-bold mb-2">{item.question}</h3>
+                  <p className="text-gray-700">{item.answer}</p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Переваги та економія */}
+      <section className="bg-[#FFD700] text-black py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.benefitsAndSavings.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {t.benefitsAndSavings.items.map(
+              (
+                item: {
+                  title: string;
+                  description: string;
+                },
+                idx: number
+              ) => (
+                <div key={`benef&save-item-${idx}`}>
+                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-gray-800">{item.description}</p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Доставка та оплата */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.deliveryAndPayment.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {t.deliveryAndPayment.items.map(
+              (
+                item: {
+                  title: string;
+                  description: string;
+                },
+                idx: number
+              ) => (
+                <div
+                  key={`delivery&pay-item-${idx}`}
+                  className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
+                >
+                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-gray-700">{item.description}</p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Контакти та підтримка */}
+      <section
+        id="contact"
+        ref={contactSectionRef}
+        className="bg-black text-white py-20"
+      >
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            {t.contactAndSupport.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                {t.contactAndSupport.socials.title}
+              </h3>
+              <p className="text-gray-300">
+                {t.contactAndSupport.socials.description}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4">
+                {t.contactAndSupport.contactForm.title}
+              </h3>
+              <form>
+                <div className="mb-4">
+                  <label
+                    className="block text-sm font-bold mb-2"
+                    htmlFor="name"
+                  >
+                    {t.contactAndSupport.contactForm.name}
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="name"
+                    type="text"
+                    placeholder={t.contactAndSupport.contactForm.name}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-sm font-bold mb-2"
+                    htmlFor="email"
+                  >
+                    {t.contactAndSupport.contactForm.email}
+                  </label>
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email"
+                    type="email"
+                    placeholder={t.contactAndSupport.contactForm.email}
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-sm font-bold mb-2"
+                    htmlFor="message"
+                  >
+                    {t.contactAndSupport.contactForm.message}
+                  </label>
+                  <textarea
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="message"
+                    placeholder={t.contactAndSupport.contactForm.message}
+                  ></textarea>
+                </div>
+                <div className="flex items-center justify-between">
+                  <button
+                    className="bg-[#FFD700] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#FFC300] transition duration-300"
+                    type="button"
+                  >
+                    {t.contactAndSupport.sendBtn}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-6">
+        <div className="container mx-auto px-4 text-center">
+          <p>{t.footer.text}</p>
+        </div>
       </footer>
     </div>
   );
