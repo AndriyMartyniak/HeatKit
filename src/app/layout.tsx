@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 
 const ubuntuSans = Ubuntu({
   weight: ["400", "700"],
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntuSans.className} antialiased`}>{children}</body>
+      <body className={`${ubuntuSans.className} antialiased`}>
+        <Suspense>{children}</Suspense>
+      </body>
     </html>
   );
 }
