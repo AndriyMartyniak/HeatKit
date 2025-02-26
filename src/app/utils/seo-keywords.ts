@@ -1,0 +1,58 @@
+export const SEO_KEYWORDS = [
+  //UA
+  "пелетний пальник",
+  "економія на опаленні",
+  "HeatKit",
+  "енергетична зброя",
+  "пелети для опалення",
+  "купити пальник",
+  "самостійне збирання",
+  "екологічне опалення",
+  "енергоефективність",
+  "опалення будинку",
+  "пелетний котел",
+  "тепло для дому",
+  "дешеве опалення",
+  "якісні матеріали",
+  "теплова зброя",
+
+  //EN
+  "pellet burner",
+  "heating savings",
+  "HeatKit",
+  "energy weapon",
+  "pellet heating",
+  "buy burner",
+  "DIY assembly",
+  "eco-friendly heating",
+  "energy efficiency",
+  "home heating",
+  "pellet boiler",
+  "home warmth",
+  "cheap heating",
+  "high-quality materials",
+  "thermal weapon",
+
+  //PL
+  "palnik na pelety",
+  "oszczędność na ogrzewaniu",
+  "HeatKit",
+  "broń energetyczna",
+  "ogrzewanie pelletem",
+  "kup palnik",
+  "samodzielny montaż",
+  "ekologiczne ogrzewanie",
+  "efektywność energetyczna",
+  "ogrzewanie domu",
+  "kocioł na pelety",
+  "ciepło dla domu",
+  "tanie ogrzewanie",
+  "wysokiej jakości materiały",
+  "broń termiczna",
+];
+
+export const SEO_DESCRIPTIONS = {
+  ua: "Продаж пелетного пальника у розібраному вигляді. Економія до 50%!",
+  en: "Sale of pellet burners in disassembled form. Save up to 50%!",
+  pl: "Sprzedaż palników na pelety w formie rozłożonej. Oszczędność do 50%!",
+};
