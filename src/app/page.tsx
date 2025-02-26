@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import { Suspense } from "react";
 
@@ -14,13 +14,11 @@ import BenefitsSection from "./components/home/benefits-section/BenefitsSection"
 import DeliverySection from "./components/home/delivery-section/DeliverySection";
 import SupportSection from "./components/home/support-section/SupportSection";
 import { translations } from "./utils/translations";
+import { useSearchParams } from "next/navigation";
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: { lang?: string };
-}) {
-  const locale = (searchParams.lang as "en" | "pl" | "ua") || "ua";
+export default function Home() {
+  const searchParams = useSearchParams();
+  const locale = (searchParams.get("lang") as "en" | "pl" | "ua") || "ua";
   const t = translations[locale] || translations.ua;
 
   return (
