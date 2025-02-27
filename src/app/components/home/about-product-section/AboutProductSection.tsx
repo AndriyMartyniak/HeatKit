@@ -16,7 +16,7 @@ const BurnerModal = dynamic(
 
 const AboutProductSection = () => {
   const searchParams = useSearchParams();
-  const locale = searchParams.get("lang") as "en" | "pl" | "ua";
+  const locale = searchParams.get("lang") as "en" | "pl" | "ua" | "rou";
   const t = translations[locale] || translations.ua;
 
   return (

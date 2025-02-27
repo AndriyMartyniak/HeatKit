@@ -55,20 +55,13 @@ export default function Home() {
       </Head>
 
       <HeroSection />
-
       <AdvantagesSection />
-
       <ReviewSection />
-
       <AboutProductSection />
-
       <HowItWorkSection />
-
       <FrequentlyQestionSection />
-
       <BenefitsSection />
       <DeliverySection />
-
       <SupportSection />
     </Suspense>
   );

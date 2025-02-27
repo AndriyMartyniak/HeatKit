@@ -6,7 +6,7 @@ import { translations } from "@/app/utils/translations";
 
 const FrequentlyQestionSection = () => {
   const searchParams = useSearchParams();
-  const locale = searchParams.get("lang") as "en" | "pl" | "ua";
+  const locale = searchParams.get("lang") as "en" | "pl" | "ua" | "rou";
   const t = translations[locale] || translations.ua;
 
   return (

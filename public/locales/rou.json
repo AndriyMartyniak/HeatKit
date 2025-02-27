@@ -1,0 +1,125 @@
+{
+  "title": "HeatKit – Armă energetică împotriva încălzirii scumpe!",
+  "description": "Vânzare arzător pe peleți în formă dezasamblată. Economisiți până la 50%!",
+  "header": {
+    "title": "HeatKit",
+    "subtitle": "Armă energetică împotriva încălzirii scumpe!"
+  },
+  "hero": {
+    "title": "Economisiți până la 50% la arzătorul pe peleți",
+    "subtitle": "Cumpărați piesele în formă dezasamblată și asamblați-l singur!",
+    "cta": "Comandă acum"
+  },
+  "advantages": {
+    "title": "Principalele avantaje ale produsului",
+    "items": [
+      {
+        "title": "Preț scăzut",
+        "description": "Oferim piese fără adaosurile producătorului, ceea ce vă permite să economisiți până la 50%."
+      },
+      {
+        "title": "Asamblare ușoară",
+        "description": "Setul este conceput pentru o asamblare ușoară și rapidă."
+      },
+      {
+        "title": "Materiale de înaltă calitate",
+        "description": "Folosim doar materiale de înaltă calitate pentru a produce piesele."
+      }
+    ]
+  },
+  "reviews": {
+    "title": "Recenzii ale clienților",
+    "items": [
+      {
+        "text": "Calitate excelentă a produsului. Există instrucțiuni detaliate cu o descriere care face ușor de asamblat. Vă mulțumim!",
+        "author": "Adrian, Arad"
+      },
+      {
+        "text": "Datorită acestui produs, am economisit o mulțime de bani. Produsul este ușor de asamblat și costă de câteva ori mai puțin. Recomand!",
+        "author": "Antim, Cluj-Napoca"
+      }
+    ]
+  },
+  "aboutProduct": {
+    "title": "Despre produs",
+    "burnerDetails": {
+      "title": "Descriere detaliată a arzătorului pe peleți",
+      "description": "Arzătorul nostru pe peleți este o soluție modernă pentru încălzire eficientă și economică. Este format din piese de înaltă calitate, ușor de asamblat singur."
+    },
+    "workingPrinciple": {
+      "title": "Cum funcționează",
+      "description": "Arzătorul funcționează cu peleți care sunt încărcați într-un buncăr special. Aceștia sunt alimentati automat în camera de ardere, unde se generează căldura."
+    }
+  },
+  "howItWorks": {
+    "title": "Cum funcționează?",
+    "stepByStep": {
+      "title": "Ghid de asamblare pas cu pas",
+      "description": "Furnizăm un ghid detaliat de asamblare pentru a vă ajuta să finalizați sarcina cu ușurință."
+    },
+    "videoInstructions": {
+      "title": "Instrucțiuni video",
+      "description": "Urmăriți instrucțiunile noastre video pe YouTube pentru a asambla arzătorul și mai rapid."
+    }
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "items": [
+      {
+        "question": "Cât timp durează asamblarea?",
+        "answer": "În medie, asamblarea durează 2-3 ore."
+      },
+      {
+        "question": "Am nevoie de unelte speciale?",
+        "answer": "Nu, tot ce este necesar este inclus în set."
+      }
+    ]
+  },
+  "benefitsAndSavings": {
+    "title": "Beneficii și economii",
+    "items": [
+      {
+        "title": "Comparație cu alte sisteme de încălzire",
+        "description": "Arzătorul nostru economisește până la 50% în comparație cu sistemele de încălzire tradiționale."
+      },
+      {
+        "title": "Calculul costurilor pentru încălzirea cu peleți",
+        "description": "Utilizați calculatorul nostru pentru a afla cât puteți economisi."
+      }
+    ]
+  },
+  "deliveryAndPayment": {
+    "title": "Livrare și plată",
+    "items": [
+      {
+        "title": "Condiții de livrare",
+        "description": "Livrare în toată Ucraina și Europa."
+      },
+      {
+        "title": "Opțiuni de plată",
+        "description": "Plată cu cardul, PayPal sau ramburs."
+      },
+      {
+        "title": "Garanție",
+        "description": "Garanție de 2 ani pentru toate componentele."
+      }
+    ]
+  },
+  "contactAndSupport": {
+    "title": "Contact și suport",
+    "sendBtn": "Trimite",
+    "socials": {
+      "title": "Chat Telegram/Viber",
+      "description": "Scrieți-ne pe Telegram sau Viber pentru o consultație rapidă."
+    },
+    "contactForm": {
+      "title": "Formular de contact",
+      "name": "Nume",
+      "email": "Email",
+      "message": "Mesaj"
+    }
+  },
+  "footer": {
+    "text": "© 2023 HeatKit. Toate drepturile rezervate."
+  }
+}
